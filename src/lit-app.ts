@@ -5,10 +5,6 @@ import {customElement, property} from 'lit/decorators.js';
 export class LitApp extends LitElement {
     static styles = [
         css`
-            :host {
-                display: flex;
-            }
-
             .master{
                 display: flex;
                 flex-direction: column;
@@ -16,7 +12,7 @@ export class LitApp extends LitElement {
                 padding: 0;
                 box-sizing: border-box;
                 width: 100%;
-                height: auto;
+                height: 100%;
             }
             .navbar{
                 display: flex;
@@ -28,7 +24,7 @@ export class LitApp extends LitElement {
                 align-items: center;
             }
             .pnav{
-                padding: 5px;
+                padding: 10px;
                 background-color: lightblue;
                 border-radius: 10px;
                 font-weight: 600;
@@ -40,16 +36,14 @@ export class LitApp extends LitElement {
                 text-align: center;
             }
             .items{
-                flex: 1;
+                width: 100%;
             }
             .item{
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
                 margin-top: 20px;
-            }
-            .pedidos{
-                flex: 1;
+                width: 100%;
             }
             .resumo{
                 display: flex;
@@ -73,35 +67,30 @@ export class LitApp extends LitElement {
                 border-radius: 5px;
                 background-color: lightblue;
                 border: none;
+                width: 95vw;
             }
             .bt:hover{
                 background-color: aqua;
+            }
+            .inqtd{
+                width: 70px;
             }
 
             @media screen and (min-width: 900px) {         
                 
                 .items{
-                    display: flex;
-                    width: 100%;
-                    background-color: red;
-                    flex: 4;
-                    flex-direction: column;
+                    flex: 3;
+                    flex-wrap: wrap;
                 }
-                .pedidos{
-                    display: flex;
-                    width: 100%;
+                .resumo{
                     flex: 1;
                 }
                 .btn{
                     display:flex;
-                    justify-content: flex-end;
-                    align-items: flex-end;
+                    justify-content: center;
                     width: 100%;
                     margin-top: 30px;
                     padding: 10px;
-                }
-                .bt{
-                    width: 100%;
                 }
             }
 
@@ -143,7 +132,6 @@ export class LitApp extends LitElement {
                 </div>
             </div>
         </div>
-        <div class='pedidos'>
             <div class='resumo'>
                 <div>
                     <span>Resumo do Pedido:</span>
@@ -169,7 +157,6 @@ export class LitApp extends LitElement {
                         Finalizar compra
                     </button>
                 </div>
-            </div>
         </div>      
     </div>
     `;
