@@ -100,12 +100,15 @@ export class LitApp extends LitElement {
                     margin-top: 30px;
                     padding: 10px;
                 }
+                .bt{
+                    width: 100%;
+                }
             }
 
         `
     ];
 
-    @property() name = 'Lit App';
+    @property() name = 'teste';
 
     render() {
         return html`
